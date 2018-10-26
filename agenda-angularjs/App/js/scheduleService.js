@@ -11,7 +11,7 @@
         };
 
         var updateSchedule = function (schedule) {
-            return $http.put(scheduleApiUrl + schedule.Id, schedule);
+            return $http.put(scheduleApiUrl + schedule.ID, schedule);
         };
 
         var createSchedule = function (schedule) {
@@ -19,7 +19,7 @@
         };
 
         var deleteSchedule = function (schedule) {
-            return $http.delete(scheduleApiUrl + schedule.Id);
+            return $http.delete(scheduleApiUrl + schedule.ID);
         };
 
         return {

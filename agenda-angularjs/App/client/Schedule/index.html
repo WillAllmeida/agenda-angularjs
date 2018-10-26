@@ -6,7 +6,10 @@
         </tr>
         <tr ng-repeat="schedule in schedules">
             <td>{{schedule.title}}</td>
-            <td><a href="#!/schedule/details/{{schedule.ID}}">Details</a></td>
+            <td>
+                <a class="btn btn-primary" href="#!/schedule/details/{{schedule.ID}}">Details</a>
+                <button class="btn btn-danger" ng-click="deleteSchedule(schedule)">Delete</button>
+            </td>
         </tr>
     </table>
 </div>
