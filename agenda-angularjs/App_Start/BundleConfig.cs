@@ -34,7 +34,8 @@ namespace agenda_angularjs
                         "~/App/js/scheduleController.js",
                         "~/App/js/homeController.js",
                         "~/App/js/scheduleDetailsController.js",
-                        "~/App/js/scheduleService.js"
+                        "~/App/js/scheduleService.js",
+                        "~/App/js/scheduleCreateController.js"
                         ));
 
             

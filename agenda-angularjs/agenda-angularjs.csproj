@@ -207,8 +207,10 @@
     <Content Include="App\client\Home\index.html" />
     <Content Include="App\client\Schedule\index.html" />
     <Content Include="App\client\Schedule\scheduleDetails.html" />
+    <Content Include="App\client\Schedule\scheduleCreate.html" />
     <Content Include="App\js\homeController.js" />
     <Content Include="App\js\index.js" />
+    <Content Include="App\js\scheduleCreateController.js" />
     <Content Include="App\js\scheduleController.js" />
     <Content Include="App\js\scheduleDetailsController.js" />
     <Content Include="App\js\scheduleService.js" />

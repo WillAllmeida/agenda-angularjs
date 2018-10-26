@@ -7,6 +7,13 @@
                 $scope.schedules = response.data;
             });
 
+        $scope.createSchedule = function () {
+            // Initializes a task object, being used to display the `scheduleCreate` form.
+            $scope.task = {
+                title: ""
+            };
+        };
+
         $scope.deleteSchedule = function (schedule) {
             scheduleService
                 .deleteSchedule(schedule)
@@ -25,6 +32,5 @@
         };
     };
 
-        app.controller('scheduleController', scheduleController);
-
-    }(angular.module("schedule")))
+    app.controller('scheduleController', scheduleController);
+ }(angular.module("schedule")))

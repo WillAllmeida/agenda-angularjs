@@ -1,0 +1,14 @@
+﻿<div>
+    <form ng-hide="shouldDisplay()">
+        <fieldset>
+            <div class="form-group">
+                <label for="title">
+                    Title
+                </label>
+                <input id="title" type="text" ng-model="task.title" required class="form-control" />
+            </div>
+            <button class="btn btn-primary" ng-click="send()">Send</button>
+            <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
+        </fieldset>
+    </form>
+</div>

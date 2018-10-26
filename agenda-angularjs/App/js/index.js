@@ -8,6 +8,11 @@
                 templateUrl: "/App/client/Home/index.html",
                 controller: "homeController"
             })
+            .when("/schedule/create",
+                {
+                    templateUrl: "/App/client/Schedule/scheduleCreate.html",
+                    controller: "scheduleCreateController"
+                })
             .when("/schedule/details/:id",
             {
                 templateUrl: "/App/client/Schedule/scheduleDetails.html",
