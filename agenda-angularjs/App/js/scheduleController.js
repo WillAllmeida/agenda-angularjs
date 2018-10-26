@@ -1,7 +1,8 @@
 ﻿(function (app) {
 
-    var scheduleController = function ($scope, $http) {
-        $http.get(window.BASE_URL+'/api/Schedules')
+    var scheduleController = function ($scope, scheduleService) {
+        scheduleService
+            .getSchedules()
             .then(response => {
                 $scope.schedules = response.data;
             });

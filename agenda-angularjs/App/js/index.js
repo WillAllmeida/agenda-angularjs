@@ -1,5 +1,5 @@
 ﻿(function () {
-    window.BASE_URL = "http://localhost:50135";
+    
     var app = angular.module("schedule", ["ngRoute"]);
     var config = function ($routeProvider) {
         $routeProvider
@@ -22,5 +22,7 @@
             .otherwise({ redirecTo: "/" });
     };
     app.config(config);
+
+    app.constant("scheduleApiUrl", "/api/Schedules/");
 
 }());

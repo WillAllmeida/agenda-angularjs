@@ -211,6 +211,7 @@
     <Content Include="App\js\index.js" />
     <Content Include="App\js\scheduleController.js" />
     <Content Include="App\js\scheduleDetailsController.js" />
+    <Content Include="App\js\scheduleService.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />

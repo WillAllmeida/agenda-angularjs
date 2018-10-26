@@ -1,12 +1,12 @@
 ﻿(function (app) {
 
-    var scheduleDetailsController = function ($scope, $http, $routeParams) {
+    var scheduleDetailsController = function ($scope, $routeParams, scheduleService) {
         
         var id = $routeParams.id;
-        $http.get(window.BASE_URL +'/api/Schedules/'+id)
+        scheduleService
+            .getScheduleById(id)
             .then(response => {
-                console.log('executei aqui');
-                $scope.sch = response.data;
+                $scope.schedule = response.data;
             });
         
     };

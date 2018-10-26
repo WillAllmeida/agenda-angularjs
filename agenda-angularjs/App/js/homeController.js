@@ -1,11 +1,10 @@
 ﻿(function (app) {
    
-    var homeController = function ($scope, $http) {
-        $http.get(window.BASE_URL+'/api/Schedules')
+    var homeController = function ($scope, scheduleService) {
+        scheduleService 
+            .getSchedules()
             .then(response => {
                 $scope.schedules = response.data;
-            }).catch(err => {
-                console.log(err);
             });
     };
 

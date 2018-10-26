@@ -1,3 +1,12 @@
-﻿<div>
+﻿<div ng-app="schedule" ng-controller="scheduleController">
     <h1>Listando schedulers</h1>
+    <table class="table">
+        <tr>
+            <th>Título</th>
+        </tr>
+        <tr ng-repeat="schedule in schedules">
+            <td>{{schedule.title}}</td>
+            <td><a href="#!/schedule/details/{{schedule.ID}}">Details</a></td>
+        </tr>
+    </table>
 </div>
