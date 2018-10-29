@@ -1,0 +1,125 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>client</Name>
+    <RootNamespace>client</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <ToolsVersionPromptShown>0.0</ToolsVersionPromptShown>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>bd35e971-7c0a-4813-ba0a-59aba21569bf</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\assets\favicon.ico" />
+    <Content Include="app\client\Home\index.html" />
+    <Content Include="app\client\Schedule\index.html" />
+    <Content Include="app\client\Schedule\scheduleCreate.html" />
+    <Content Include="app\client\Schedule\scheduleDetails.html" />
+    <Content Include="app\index.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\app\contacts\components\add-contact-form\add-contact-form.component.html" />
+    <Content Include="src\app\contacts\components\contact-list\contact-list.component.scss" />
+    <Content Include="src\app\contacts\containers\contacts\contacts.container.scss" />
+    <Content Include="src\app\core\components\app\app.component.scss" />
+    <Content Include="src\app\not-found\components\app\app.component.scss" />
+    <Content Include="src\index.html" />
+    <Content Include="src\index.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\client\" />
+    <Folder Include="app\client\Home\" />
+    <Folder Include="app\client\Schedule\" />
+    <Folder Include="app\js\" />
+    <Folder Include="app\assets\" />
+    <Folder Include="src\" />
+    <Folder Include="src\app\" />
+    <Folder Include="src\app\contacts\" />
+    <Folder Include="src\app\contacts\components\" />
+    <Folder Include="src\app\contacts\components\add-contact-form\" />
+    <Folder Include="src\app\contacts\components\contact-list\" />
+    <Folder Include="src\app\contacts\containers\" />
+    <Folder Include="src\app\contacts\containers\add-contact\" />
+    <Folder Include="src\app\contacts\containers\contacts\" />
+    <Folder Include="src\app\contacts\services\" />
+    <Folder Include="src\app\core\" />
+    <Folder Include="src\app\core\components\" />
+    <Folder Include="src\app\core\components\app\" />
+    <Folder Include="src\app\core\components\root\" />
+    <Folder Include="src\app\not-found\" />
+    <Folder Include="src\app\not-found\components\" />
+    <Folder Include="src\app\not-found\components\app\" />
+    <Folder Include="src\app\not-found\components\root\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\js\homeController.js" />
+    <Compile Include="src\app\index.js" />
+    <Compile Include="app\js\scheduleController.js" />
+    <Compile Include="app\js\scheduleCreateController.js" />
+    <Compile Include="app\js\scheduleDetailsController.js" />
+    <Compile Include="app\js\scheduleService.js" />
+    <Compile Include="webpack-dev.config.js" />
+    <Compile Include="webpack-prod.config.js" />
+    <Compile Include="webpack.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\app.module.js" />
+    <TypeScriptCompile Include="src\app\contacts\components\add-contact-form\add-contact-form.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\contacts\components\add-contact-form\add-contact-form.component.ts" />
+    <TypeScriptCompile Include="src\app\contacts\components\contact-list\contact-list.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\contacts\components\contact-list\contact-list.component.ts" />
+    <TypeScriptCompile Include="src\app\contacts\contacts.module.ts" />
+    <TypeScriptCompile Include="src\app\contacts\contacts.routes.ts" />
+    <TypeScriptCompile Include="src\app\contacts\containers\add-contact\add-contact.container.spec.ts" />
+    <TypeScriptCompile Include="src\app\contacts\containers\add-contact\add-contact.container.ts" />
+    <TypeScriptCompile Include="src\app\contacts\containers\contacts\contacts.container.spec.ts" />
+    <TypeScriptCompile Include="src\app\contacts\containers\contacts\contacts.container.ts" />
+    <TypeScriptCompile Include="src\app\contacts\services\contacts.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\contacts\services\contacts.service.ts" />
+    <TypeScriptCompile Include="src\app\app.routes.ts" />
+    <TypeScriptCompile Include="src\app\core\components\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\core\components\root\root.component.ts" />
+    <TypeScriptCompile Include="src\app\core\core.configuration.ts" />
+    <TypeScriptCompile Include="src\app\core\core.module.ts" />
+    <TypeScriptCompile Include="src\app\core\core.routes.ts" />
+    <TypeScriptCompile Include="src\app\not-found\components\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\not-found\components\root\root.component.ts" />
+    <TypeScriptCompile Include="src\app\not-found\not-found.configuration.ts" />
+    <TypeScriptCompile Include="src\app\not-found\not-found.module.ts" />
+    <TypeScriptCompile Include="src\app\not-found\not-found.routes.ts" />
+    <TypeScriptCompile Include="src\index.js" />
+    <TypeScriptCompile Include="src\polyfills.js" />
+    <TypeScriptCompile Include="src\vendor.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>
